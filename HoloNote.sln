@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.Core", "HoloNote.Core\HoloNote.Core.csproj", "{13E50AC4-6B03-4735-B973-D01D092C9D97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{D27FD204-D306-42AD-A768-353A28710881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.LoginApi", "HoloNote.LoginApi\HoloNote.LoginApi.csproj", "{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.NoteApi", "HoloNote.NoteApi\HoloNote.NoteApi.csproj", "{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.AiApi", "HoloNote.AiApi\HoloNote.AiApi.csproj", "{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{D91E29C4-3AB8-4D34-9411-611FB0DEA2D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{64A75E1B-A177-409B-897D-2BE4629CB33B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13E50AC4-6B03-4735-B973-D01D092C9D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E50AC4-6B03-4735-B973-D01D092C9D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E50AC4-6B03-4735-B973-D01D092C9D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E50AC4-6B03-4735-B973-D01D092C9D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435} = {D27FD204-D306-42AD-A768-353A28710881}
+		{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32} = {D27FD204-D306-42AD-A768-353A28710881}
+		{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B} = {D27FD204-D306-42AD-A768-353A28710881}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA013296-9F63-41E7-BE57-31333BAD7524}
+	EndGlobalSection
+EndGlobal
