@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.Core", "HoloNote.Core\HoloNote.Core.csproj", "{13E50AC4-6B03-4735-B973-D01D092C9D97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.Core", "HoloNote.Core\HoloNote.Core.csproj", "{13E50AC4-6B03-4735-B973-D01D092C9D97}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{D27FD204-D306-42AD-A768-353A28710881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.LoginApi", "HoloNote.LoginApi\HoloNote.LoginApi.csproj", "{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.LoginApi", "HoloNote.LoginApi\HoloNote.LoginApi.csproj", "{2182D90E-38E5-4BBD-B9BD-2BDEB1CEC435}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.NoteApi", "HoloNote.NoteApi\HoloNote.NoteApi.csproj", "{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.NoteApi", "HoloNote.NoteApi\HoloNote.NoteApi.csproj", "{3C7A8564-F289-4E63-8B1B-38D0CA1EEE32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.AiApi", "HoloNote.AiApi\HoloNote.AiApi.csproj", "{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.AiApi", "HoloNote.AiApi\HoloNote.AiApi.csproj", "{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{64A75E1B-A177-409B-897D-2BE4629CB33B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.Dto", "HoloNote.Dto\HoloNote.Dto.csproj", "{6C4C6336-1012-4E81-9378-90A0F1A4C201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.Dto", "HoloNote.Dto\HoloNote.Dto.csproj", "{6C4C6336-1012-4E81-9378-90A0F1A4C201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.DbConnection", "HoloNote.DbConnection\HoloNote.DbConnection.csproj", "{09E8DAC9-17B1-4DC3-BC97-CBCA1B787396}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.DbConnection", "HoloNote.DbConnection\HoloNote.DbConnection.csproj", "{09E8DAC9-17B1-4DC3-BC97-CBCA1B787396}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{54C20FAA-FB43-4853-B784-5519D8059987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.ApiContract", "HoloNote.ApiContract\HoloNote.ApiContract.csproj", "{E3FD8870-0D30-4855-A53A-CBC931310622}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{09E8DAC9-17B1-4DC3-BC97-CBCA1B787396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E8DAC9-17B1-4DC3-BC97-CBCA1B787396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E8DAC9-17B1-4DC3-BC97-CBCA1B787396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3FD8870-0D30-4855-A53A-CBC931310622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FD8870-0D30-4855-A53A-CBC931310622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FD8870-0D30-4855-A53A-CBC931310622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3FD8870-0D30-4855-A53A-CBC931310622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{E0EA4D1B-F31E-4D9C-AF80-1E4120BFB51B} = {D27FD204-D306-42AD-A768-353A28710881}
 		{6C4C6336-1012-4E81-9378-90A0F1A4C201} = {64A75E1B-A177-409B-897D-2BE4629CB33B}
 		{09E8DAC9-17B1-4DC3-BC97-CBCA1B787396} = {64A75E1B-A177-409B-897D-2BE4629CB33B}
+		{E3FD8870-0D30-4855-A53A-CBC931310622} = {D27FD204-D306-42AD-A768-353A28710881}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA013296-9F63-41E7-BE57-31333BAD7524}

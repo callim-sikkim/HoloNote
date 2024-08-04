@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\HoloNote.Core\HoloNote.Core.csproj" />
   </ItemGroup>
 
 </Project>
