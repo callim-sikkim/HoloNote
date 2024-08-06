@@ -4,12 +4,12 @@ namespace HoloNote.Core.Services;
 
 public interface IAIService
 {
-    string TestFunction(string question);
 }
 
-public class AiService : IAIService
+public class AiService : IAIService, IDisposable
 {
     private readonly IHttpClientFactory _httpClientFactory;
+    private HttpClient _httpClient;
     private readonly AiConnectionConfig _aiConnection;
 
     public AiService(IHttpClientFactory httpClientFactory, AiConnectionConfig aiConnection)
@@ -18,11 +18,23 @@ public class AiService : IAIService
         _aiConnection = aiConnection;
     }
 
-    public string TestFunction(string question)
+    private void CreateNewHttpClient()
     {
         var httpClient = _httpClientFactory.CreateClient();
         httpClient.BaseAddress = new Uri(_aiConnection.Url);
         httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _aiConnection.ApiKey);
-        return httpClient.DefaultRequestHeaders.ToString();
+        _httpClient = httpClient;
+    }
+
+    private HttpClient GetHttp()
+    {
+        if(_httpClient is null)
+            CreateNewHttpClient();
+        return _httpClient;
+    }
+
+    public void Dispose()
+    {
+        _httpClient.Dispose();
     }
 }
