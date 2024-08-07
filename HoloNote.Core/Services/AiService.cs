@@ -4,6 +4,7 @@ namespace HoloNote.Core.Services;
 
 public interface IAIService
 {
+    HttpClient GetHttp();
 }
 
 public class AiService : IAIService, IDisposable
@@ -26,9 +27,9 @@ public class AiService : IAIService, IDisposable
         _httpClient = httpClient;
     }
 
-    private HttpClient GetHttp()
+    public HttpClient GetHttp()
     {
-        if(_httpClient is null)
+        if (_httpClient is null)
             CreateNewHttpClient();
         return _httpClient;
     }
