@@ -1,11 +1,8 @@
 using HoloNote.Core.CQRS.AskQuestion;
 using HoloNote.Core.Services;
-using HoloNote.Core.Services.Contract;
 using Moq;
 using Moq.Protected;
-using System.Linq.Expressions;
 using System.Net;
-using System.Net.Http.Json;
 
 namespace HoloNote.UnitTest.CQRS
 {
