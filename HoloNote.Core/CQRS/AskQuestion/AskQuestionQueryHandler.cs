@@ -21,14 +21,10 @@ public class AskQuestionQueryHandler : IRequestHandler<AskQuestionQuery, AskQues
 
 
         var response = await httpClient.PostAsJsonAsync("https://api.openai.com/v1/chat/completions", aiRequest, cancellationToken);
-        if(response != null && response.Content != null)
-        {
-            var result = await response.Content.ReadFromJsonAsync<AiResponse>(cancellationToken);
+        var result = await response.Content.ReadFromJsonAsync<AiResponse>(cancellationToken);
 
-            return new AskQuestionViewModel { Answer = result.Choices.First().Message.Content.Normalize() };
-        }
+        return new AskQuestionViewModel { Answer = result.Choices.First().Message.Content.Normalize() };
 
-        return new AskQuestionViewModel { Answer = $"Response was null, your question was {request.Question}" };
     }
 
 }
