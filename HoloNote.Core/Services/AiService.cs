@@ -22,7 +22,6 @@ public class AiService : IAIService, IDisposable
     private void CreateNewHttpClient()
     {
         var httpClient = _httpClientFactory.CreateClient();
-        httpClient.BaseAddress = new Uri(_aiConnection.Url);
         httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _aiConnection.ApiKey);
         _httpClient = httpClient;
     }

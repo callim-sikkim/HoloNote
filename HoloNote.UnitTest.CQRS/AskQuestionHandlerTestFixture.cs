@@ -19,7 +19,7 @@ namespace HoloNote.UnitTest.CQRS
         }
 
         [Fact]
-        public async Task Test1()
+        public async Task Handler_Should_Return_Not_Null_Response()
         {
             //Arrange
             _mockMessageHandler.Protected()
@@ -27,16 +27,17 @@ namespace HoloNote.UnitTest.CQRS
                            "SendAsync",
                            ItExpr.Is<HttpRequestMessage>(req =>
                                req.Method == HttpMethod.Post &&
-                               req.RequestUri == new Uri("https://example.com/api/resource")),
+                               req.RequestUri == new Uri("https://api.openai.com/v1/chat/completions")),
                            ItExpr.IsAny<CancellationToken>())
                        .ReturnsAsync(new HttpResponseMessage
                        {
                            StatusCode = HttpStatusCode.OK,
-                           Content = new StringContent("{\"result\":\"success\"}"),
+                           Content = new StringContent("{\"result\":\"success\",\"choices\":[{\"message\":{\"role\":\"tester\",\"content\":\"test\"}}]}"),
                        });
 
             var httpClient = new HttpClient(_mockMessageHandler.Object);
-            httpClient.BaseAddress = new Uri("https://example.com");
+            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "PAST_API_KEY_HERE");
+
 
             _mockAIService.Setup(x => x.GetHttp()).Returns(httpClient);
             var query = new AskQuestionQuery
@@ -48,7 +49,8 @@ namespace HoloNote.UnitTest.CQRS
             var response = await askQuestionHandler.Handle(query, CancellationToken.None);
             //Act
 
-            Assert.True(response == null);
+            Assert.True(response != null);
+            Assert.True(response.Answer == "test");
         }
     }
 }
