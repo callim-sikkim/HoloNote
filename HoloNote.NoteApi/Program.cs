@@ -20,6 +20,8 @@ var dbConnectionConfig = new DbConnectionConfig
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory(builder =>
 {
+    builder.RegisterModule(new MediatRModule());
+    builder.RegisterModule(new AutoMapperModule());
     builder.RegisterModule(new DbModule(dbConnectionConfig));
 }));
 
