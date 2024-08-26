@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.ApiContract", "Hol
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{56596ABA-A787-477C-A24D-EE334D4A744A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloNote.UnitTest.CQRS", "HoloNote.UnitTest.CQRS\HoloNote.UnitTest.CQRS.csproj", "{6B614903-D495-419D-A395-925267EB0648}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoloNote.UnitTest.CQRS", "HoloNote.UnitTest.CQRS\HoloNote.UnitTest.CQRS.csproj", "{6B614903-D495-419D-A395-925267EB0648}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
