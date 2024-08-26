@@ -14,4 +14,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HoloNote.Core\HoloNote.Core.csproj" />
+    <ProjectReference Include="..\HoloNote.DbConnection\HoloNote.DbConnection.csproj" />
+  </ItemGroup>
+
 </Project>
