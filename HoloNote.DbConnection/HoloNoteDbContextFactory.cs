@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace HoloNote.DbConnection;
 
+//Added to allow create migrations from this project - Configure all neccessery options to build DbContext
 public class HoloNoteDbContextFactory : IDesignTimeDbContextFactory<HoloNoteDbContext>
 {
     public HoloNoteDbContext CreateDbContext(string[] args)
