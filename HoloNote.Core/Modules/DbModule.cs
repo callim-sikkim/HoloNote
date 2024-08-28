@@ -1,6 +1,8 @@
 ﻿using Autofac;
+
 using HoloNote.DbConnection;
 using HoloNote.DbConnection.Configuration;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace HoloNote.Core.Modules;

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+
 using HoloNote.Core.AutoMapper.Profiles;
 
 namespace HoloNote.Core.AutoMapper;

@@ -1,5 +1,11 @@
 ﻿using AutoMapper;
+
+using HoloNote.ApiContract.Request;
+using HoloNote.ApiContract.Response;
+using HoloNote.Core.CQRS.Note.Create;
+
 using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace HoloNote.NoteApi.Controllers;
@@ -24,15 +30,17 @@ public class NoteController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public IActionResult GetNote(int id) 
+    public IActionResult GetNote(int id)
     {
         return Ok(new { id });
     }
 
     [HttpPost]
-    public IActionResult CreateNote()
+    public async Task<IActionResult> CreateNote([FromBody] CreateNoteRequest request)
     {
-        return Ok();
+        var command = _mapper.Map<CreateNoteCommand>(request);
+        var response = await _mediator.Send(command);
+        return Ok(_mapper.Map<CreateNoteResponse>(response));
     }
 
     [HttpPut]

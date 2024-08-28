@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
+
 using HoloNote.ApiContract.Request;
 using HoloNote.ApiContract.Response;
 using HoloNote.Core.CQRS.AskQuestion;
+
 using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace HoloNote.AiApi.Controllers

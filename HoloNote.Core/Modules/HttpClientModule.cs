@@ -1,6 +1,8 @@
 ﻿using Autofac;
+
 using HoloNote.Core.Config;
 using HoloNote.Core.Services;
+
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HoloNote.Core.Modules;

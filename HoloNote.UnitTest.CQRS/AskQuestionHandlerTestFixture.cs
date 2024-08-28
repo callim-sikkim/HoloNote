@@ -1,7 +1,9 @@
 using HoloNote.Core.CQRS.AskQuestion;
 using HoloNote.Core.Services;
+
 using Moq;
 using Moq.Protected;
+
 using System.Net;
 
 namespace HoloNote.UnitTest.CQRS

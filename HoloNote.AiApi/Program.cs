@@ -1,5 +1,6 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+
 using HoloNote.Core.Config;
 using HoloNote.Core.Modules;
 

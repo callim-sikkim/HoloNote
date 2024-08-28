@@ -1,4 +1,5 @@
 ﻿using Autofac;
+
 using HoloNote.Core.AutoMapper;
 
 namespace HoloNote.Core.Modules;

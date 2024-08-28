@@ -1,6 +1,8 @@
 ﻿using Autofac;
+
 using MediatR;
 using MediatR.Pipeline;
+
 using System.Reflection;
 
 namespace HoloNote.Core.Modules;
