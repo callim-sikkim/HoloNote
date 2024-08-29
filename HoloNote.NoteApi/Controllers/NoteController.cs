@@ -3,6 +3,7 @@
 using HoloNote.ApiContract.Request;
 using HoloNote.ApiContract.Response;
 using HoloNote.Core.CQRS.Note.Create;
+using HoloNote.Core.CQRS.Note.Delete;
 using HoloNote.Core.CQRS.Note.Update;
 
 using MediatR;
@@ -40,7 +41,7 @@ public class NoteController : ControllerBase
     public async Task<IActionResult> CreateNote([FromBody] CreateNoteRequest request)
     {
         var command = _mapper.Map<CreateNoteCommand>(request);
-        var response = await _mediator.Send(command);
+        var response = await _mediator.Send(command, HttpContext.RequestAborted);
         return Ok(_mapper.Map<CreateNoteResponse>(response));
     }
 
@@ -48,13 +49,16 @@ public class NoteController : ControllerBase
     public async Task<IActionResult> UpdateNote([FromBody] UpdateNoteRequest request)
     {
         var command = _mapper.Map<UpdateNoteCommand>(request);
-        var response = await _mediator.Send(command);
+        var response = await _mediator.Send(command, HttpContext.RequestAborted);
         return Ok(_mapper.Map<UpdateNoteResponse>(response));
     }
 
-    [HttpDelete]
-    public IActionResult DeleteNote(int id)
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteNote([FromRoute] long id)
     {
+        var request = new DeleteNoteRequest { Id = id };
+        var command = _mapper.Map<DeleteNoteCommand>(request);
+        await _mediator.Send(command, HttpContext.RequestAborted);
         return Ok();
     }
 }

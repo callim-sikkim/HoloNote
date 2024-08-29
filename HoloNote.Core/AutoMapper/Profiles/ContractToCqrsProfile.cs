@@ -4,6 +4,7 @@ using HoloNote.ApiContract.Request;
 using HoloNote.ApiContract.Response;
 using HoloNote.Core.CQRS.AskQuestion;
 using HoloNote.Core.CQRS.Note.Create;
+using HoloNote.Core.CQRS.Note.Delete;
 using HoloNote.Core.CQRS.Note.Update;
 
 namespace HoloNote.Core.AutoMapper.Profiles;
@@ -16,6 +17,7 @@ public class ContractToCqrsProfile : Profile
         CreateMap<AiAskQuestionRequest, AskQuestionQuery>();
         CreateMap<CreateNoteRequest, CreateNoteCommand>();
         CreateMap<UpdateNoteRequest, UpdateNoteCommand>();
+        CreateMap<DeleteNoteRequest, DeleteNoteCommand>();
         #endregion
 
         #region Response

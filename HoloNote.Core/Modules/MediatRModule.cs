@@ -21,6 +21,7 @@ public class MediatRModule : Autofac.Module
         var mediatrOpenTypes = new[]
         {
             typeof(IRequestHandler<,>),
+            typeof(IRequestHandler<>),
             typeof(IRequestExceptionHandler<,,>),
             typeof(IRequestExceptionAction<,>),
             typeof(INotificationHandler<>),
