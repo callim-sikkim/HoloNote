@@ -23,9 +23,9 @@ public class CreateNoteCommandHandler : IRequestHandler<CreateNoteCommand, Creat
 
         return Task.FromResult(
             new CreateNoteViewModel
-                {
-                    Note = request.Note,
-                }
+            {
+                Note = request.Note,
+            }
             );
     }
 }

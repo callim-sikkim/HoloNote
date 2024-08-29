@@ -3,6 +3,7 @@
 using HoloNote.ApiContract.Request;
 using HoloNote.ApiContract.Response;
 using HoloNote.Core.CQRS.Note.Create;
+using HoloNote.Core.CQRS.Note.Update;
 
 using MediatR;
 
@@ -44,9 +45,11 @@ public class NoteController : ControllerBase
     }
 
     [HttpPut]
-    public IActionResult UpdateNote(int id)
+    public async Task<IActionResult> UpdateNote([FromBody] UpdateNoteRequest request)
     {
-        return Ok();
+        var command = _mapper.Map<UpdateNoteCommand>(request);
+        var response = await _mediator.Send(command);
+        return Ok(_mapper.Map<UpdateNoteResponse>(response));
     }
 
     [HttpDelete]
